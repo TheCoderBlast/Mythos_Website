@@ -22,13 +22,10 @@
   }
 
   &__logo {
-    display: block;
     width: u.rem(70);
-    height: auto;
 
     @include u.breakpoint-up(large) {
       width: u.rem(128);
-      height: auto;
     }
   }
 
@@ -53,6 +50,7 @@
     letter-spacing: 0.05em;
     color: var(--text-light);
     text-transform: uppercase;
+    text-decoration: none;
 
     &:hover {
       text-decoration: underline;

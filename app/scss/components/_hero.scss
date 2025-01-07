@@ -1,0 +1,62 @@
+@use '../util/' as u;
+
+.hero {
+  background-color: var(--hero-bg);
+  color: var(--text-light);
+
+  &__wrapper {
+    // display: flex;
+    // flex-direction: column;
+    // align-items: center;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    align-items: center;
+    gap: u.rem(40);
+    padding-block: u.rem(30) u.rem(60);
+
+    @include u.breakpoint-up(large) {
+      // flex-direction: row-reverse;
+      grid-template-columns: 6fr 5fr;
+      gap: 10%; // 1/12 --> 0.083333 --> *100 -->8.33 --> 9%
+      padding-block: u.rem(40) u.rem(80);
+    }
+  }
+
+  &__image {
+    width: 61%;
+    max-width: u.rem(483);
+
+    @include u.breakpoint-up(large) {
+      order: 2;
+      width: 100%;
+      // flex: 5;
+    }
+
+    // width: u.rem(200);
+    // @include u.breakpoint-up(large) {
+    //   width: u.rem(483);
+    // }
+  }
+
+  &__text {
+    @include u.breakpoint-up(large) {
+      // flex: 6;
+    }
+  }
+
+  &__title {
+  }
+
+  &__content {
+  }
+
+  &__button {
+    text-decoration: none;
+
+    &:first-of-type {
+      margin-right: 20px;
+    }
+  }
+}
