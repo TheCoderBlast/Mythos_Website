@@ -10,7 +10,6 @@
     padding-block: u.rem(12);
 
     @include u.breakpoint-up(large) {
-      display: flex;
       padding-block: u.rem(20);
     }
   }
